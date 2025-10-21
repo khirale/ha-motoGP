@@ -108,6 +108,7 @@ custom_components/motogp_tracker
   └── fr.json
 
 www/motogp
+
 ├── losail.png
 
 ├── jerez.png
