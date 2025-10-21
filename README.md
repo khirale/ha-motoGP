@@ -90,11 +90,17 @@ Intervalle de mise à jour : défini dans la constante UPDATE_INTERVAL_CONFIG
 
 custom_components/motogp_tracker
 ├── init.py
+
 ├── config_flow.py
+
 ├── const.py
+
 ├── entity.py
+
 ├── manifest.json
+
 ├── sensor.py
+
 └── translations
   ├── en.json
   └── fr.json
