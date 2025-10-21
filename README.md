@@ -102,13 +102,18 @@ custom_components/motogp_tracker
 ├── sensor.py
 
 └── translations
+
   ├── en.json
+  
   └── fr.json
 
 www/motogp
 ├── losail.png
+
 ├── jerez.png
+
 ├── mugello.png
+
 └── ... (une par circuit)
 
 **Crédits :**
