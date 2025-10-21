@@ -89,6 +89,7 @@ Intervalle de mise à jour : défini dans la constante UPDATE_INTERVAL_CONFIG
 **Structure du dossier :**
 
 custom_components/motogp_tracker
+
 ├── init.py
 
 ├── config_flow.py
