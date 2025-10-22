@@ -627,14 +627,6 @@ class MotoGPNextSessionsSensor(MotoGPEntityBase):
         self.async_write_ha_state()
 
         _LOGGER.info(f"[MotoGP Next Sessions] ✅ {len(sessions_light)} sessions détectées pour {self.event_sensor.event_uuid}")
-        if self.race_uuid:
-            _LOGGER.info(f"[MotoGP Next Sessions] 🏁 Session de course détectée : {self.race_uuid}")
-
-            hass_live = self.hass.data[DOMAIN].get("live")
-            if hass_live:
-                hass_live.sessions_sensor = self  # garantit la référence directe
-                _LOGGER.debug(f"[MotoGP Next Sessions] 🔗 Référence directe établie avec LiveTiming (race_uuid={self.race_uuid})")
-                self.hass.async_create_task(hass_live.async_update())
 
         if DOMAIN in self.hass.data and "race_start" in self.hass.data[DOMAIN]:
             _LOGGER.debug("[MotoGP Next Sessions] Déclenchement du capteur Race Start")
@@ -825,4 +817,5 @@ class MotoGPLiveTimingSensor(MotoGPEntityBase):
 
     @property
     def available(self) -> bool:
+
         return True
